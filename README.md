@@ -3,7 +3,7 @@
 Colección de scripts para soportar el sistema de control y monitoreo de las variables físicas en el entorno de la planta y para la gestión vía web.
 
 ## Firmware
-### Sistema In-planter (/inplanter)
+### Sistema In-planter (/in-planter)
 Monitoreo de temperatura y humedad en la matera.
 ### Sistema de riego y reserva (/level)
 Monitoreo del nivel de tangue de reserva.
