@@ -2,7 +2,24 @@
   <div class="list row">
     <div>
       <h4>Reading List</h4>
-
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Temperature</th>
+            <th>Moisture</th>
+            <th>Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="reading in readings">
+            <td>{{ reading.createdAt }}</td>
+            <td>{{ reading.temperature }}</td>
+            <td>{{ reading.moisture }}</td>
+            <td>{{ reading.level }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
@@ -15,27 +32,22 @@ export default {
   name: "ReadingList",
   data() {
     return {
-      tasks: [],
-      currentTask: null,
-      currentIndex: -1,
-      title: "",
+      readings: [],
     };
   },
   methods: {
-    fetchTasks() {
+    fetchReadings() {
       ReadingDataService.getAll()
         .then((response) => {
-          this.tasks = response.data;
+          this.readings = response.data;
           console.log(response.data);
         })
         .catch((e) => {
-          console.log(e);
+          console.error(e);
         });
     },
     refreshList() {
-      this.fetchTasks();
-      this.currentTask = null;
-      this.currentIndex = -1;
+      this.fetchReadings();
     },
     getDate(datetime) {
       let date = new Date(datetime);
@@ -48,7 +60,7 @@ export default {
     },
   },
   mounted() {
-    this.fetchTasks();
+    this.fetchReadings();
   },
 };
 </script>
