@@ -12,4 +12,4 @@ Monitoreo del nivel de tangue de reserva.
 ### Servidor web (/api)
 Aplicación NodeJS con ExpressJS como servidor web y base de datos MySQL.
 ### Interfaz gráfica web (/frontend)
-Single Page Application (SPA) usando VueJS para visualizar los registros alimentados por los nodos In-planter
+Single Page Application (SPA) usando VueJS para visualizar los registros alimentados por los nodos In-planter.

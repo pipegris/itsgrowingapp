@@ -1,22 +1,22 @@
 <template>
   <div class="list row">
-    <div>
+    <div class="row">
       <h4>Reading List</h4>
-      <table class="table">
+      <table class="table table-striped table-dark">
         <thead>
           <tr>
             <th>Date</th>
-            <th>Temperature</th>
-            <th>Moisture</th>
-            <th>Level</th>
+            <th>Temperature (°C)</th>
+            <th>Moisture (%)</th>
+            <th>Level (%)</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="reading in readings">
             <td>{{ reading.createdAt }}</td>
-            <td>{{ reading.temperature }}</td>
-            <td>{{ reading.moisture }}</td>
-            <td>{{ reading.level }}</td>
+            <td class="text-center">{{ reading.temperature }}</td>
+            <td class="text-center">{{ reading.moisture }}</td>
+            <td class="text-center">{{ reading.level }}</td>
           </tr>
         </tbody>
       </table>
